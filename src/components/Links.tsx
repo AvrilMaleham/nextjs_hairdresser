@@ -18,7 +18,7 @@ const Links = () => {
   ];
 
   return (
-  <div>
+  <div  className="flex items-center gap-5">
     {link.map((link => (
         <Link href={link.path} key={link.title}>{link.title}</Link>
     )))}

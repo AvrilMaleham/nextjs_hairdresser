@@ -19,9 +19,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="flex flex-col items-center justify-between min-h-screen p-4">
+        <div className="flex flex-col justify-between min-h-screen p-4 w-4/5 m-auto">
           <Navbar />
-          <main className="text-8xl font-bold tracking-wide">{children}</main>
+          <main className="text-8xl font-bold tracking-wide m-auto">{children}</main>
           <Footer />
         </div>
       </body>
