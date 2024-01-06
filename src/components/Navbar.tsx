@@ -1,11 +1,9 @@
-import Link from "next/link";
+import Links from "./Links";
 
 const Navbar = () => {
   return (
     <div>
-       <Link href="/contact">Contact</Link>
-       <Link href="/portfolio">Portfolio</Link>
-       <Link href="/prices">Prices</Link>
+        <Links />
     </div>
   )
 }
