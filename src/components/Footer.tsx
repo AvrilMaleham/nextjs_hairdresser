@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <div className="place-self-center">
+    <div className="w-full text-center">
       Footer
     </div>
   )

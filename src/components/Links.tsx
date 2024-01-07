@@ -52,7 +52,7 @@ const Links = () => {
       </button>
 
       {isOpen && (
-        <div className="flex flex-col items-center gap-5">
+        <div className="flex flex-col items-center justify-center gap-10 absolute top-100 right-0 w-1/2 h-full bg-bg">
           {link.map((linkItem) => (
             <Link
               href={linkItem.path}
