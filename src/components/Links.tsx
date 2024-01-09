@@ -31,6 +31,7 @@ const Links = () => {
 
   return (
     <div>
+      {/* Top menu */}
       <div className="hidden md:flex items-center gap-5">
         {link.map((link) => (
           <Link
@@ -47,26 +48,38 @@ const Links = () => {
         ))}
       </div>
 
-      <button className=" md:hidden text-xl font-bold" onClick={() => setIsOpen((prev) => !prev)}>
+      <button
+        className=" md:hidden text-xl font-bold"
+        onClick={() => setIsOpen(true)}
+      >
         Menu
       </button>
 
+      {/* Sidebar menu */}
       {isOpen && (
-        <div className="flex flex-col items-center justify-center gap-10 absolute top-100 right-0 w-1/2 h-full bg-bg">
-          {link.map((linkItem) => (
-            <Link
-              href={linkItem.path}
-              key={linkItem.title}
-              className={`${
-                pathName === linkItem.path
-                  ? "bg-text text-bg rounded-full p-2" // Apply active styles
-                  : "" // Apply normal styles
-              }`}
-            >
-              {linkItem.title}
-            </Link>
-          ))}
-        </div>
+        <>
+          <button
+            className="text-xl font-bold z-50 absolute top-15 right-15 md:hidden"
+            onClick={() => setIsOpen(false)}
+          >
+            X
+          </button>
+          <div className="flex flex-col items-center justify-center gap-10 absolute top-0 right-0 w-1/2 h-full bg-bg md:hidden">
+            {link.map((linkItem) => (
+              <Link
+                href={linkItem.path}
+                key={linkItem.title}
+                className={`${
+                  pathName === linkItem.path
+                    ? "bg-text text-bg rounded-full p-2" // Apply active styles
+                    : "" // Apply normal styles
+                }`}
+              >
+                {linkItem.title}
+              </Link>
+            ))}
+          </div>
+        </>
       )}
     </div>
   );
