@@ -57,13 +57,8 @@ const Links = () => {
 
       {/* Sidebar menu */}
       {isOpen && (
-        <>
-          <button
-            className="text-xl font-bold z-50 absolute top-15 right-15 md:hidden"
-            onClick={() => setIsOpen(false)}
-          >
-            X
-          </button>
+        // Blur background
+        <div className="fixed h-full w-screen bg-bg/50 backdrop-blur-sm top-0 right-0 md:hidden">
           <div className="flex flex-col items-center justify-center gap-10 absolute top-0 right-0 w-1/2 h-full bg-bg md:hidden">
             {link.map((linkItem) => (
               <Link
@@ -79,7 +74,14 @@ const Links = () => {
               </Link>
             ))}
           </div>
-        </>
+
+          <button
+            className="text-xl font-bold z-50 absolute m-8 right-5 top-5 md:hidden"
+            onClick={() => setIsOpen(false)}
+          >
+            X
+          </button>
+        </div>
       )}
     </div>
   );
