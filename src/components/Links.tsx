@@ -39,7 +39,7 @@ const Links = () => {
             key={link.title}
             className={`${
               pathName === link.path
-                ? "bg-text text-bg rounded-full p-2" // Apply active styles
+                ? "bg-textCol text-backgroundCol rounded-full p-2" // Apply active styles
                 : "" // Apply normal styles
             }`}
           >
@@ -58,15 +58,15 @@ const Links = () => {
       {/* Sidebar menu */}
       {isOpen && (
         // Blur background
-        <div className="fixed h-full w-screen bg-bg/50 backdrop-blur-sm top-0 right-0 md:hidden">
-          <div className="flex flex-col items-center justify-center gap-10 absolute top-0 right-0 w-1/2 h-full bg-bg md:hidden">
+        <div className="fixed h-full w-screen bg-backgroundCol/50 backdrop-blur-sm top-0 right-0 md:hidden">
+          <div className="flex flex-col items-center justify-center gap-10 absolute top-0 right-0 w-1/2 h-full bg-backgroundCol md:hidden">
             {link.map((linkItem) => (
               <Link
                 href={linkItem.path}
                 key={linkItem.title}
                 className={`${
                   pathName === linkItem.path
-                    ? "bg-text text-bg rounded-full p-2" // Apply active styles
+                    ? "bg-textCol text-backgroundCol rounded-full p-2" // Apply active styles
                     : "" // Apply normal styles
                 }`}
               >

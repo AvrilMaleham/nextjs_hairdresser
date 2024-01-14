@@ -4,14 +4,13 @@
 
 @layer base {
 :root {
-  --bg: #0d0c22;
-  --text: white;
+  --backgroundCol: #0d0c22;
+  --textCol: white;
 }
 }
 
 @layer base {
 body {
-  background-color: var(--bg);
-  color: var(--text);
+  @apply bg-backgroundCol text-textCol;
 }
 }
