@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import clsx from "clsx";
 
 interface LinkItem {
   title: string;
@@ -57,14 +56,10 @@ const Links = () => {
       </button>
 
       {/* Sidebar menu */}
-
-      {/* Blur background */}
-      {/* <div className={clsx("fixed h-full w-screen bg-backgroundCol/50 backdrop-blur-sm top-0 right-0 translate-x-[1000px] transition-all md:hidden",
-        isOpen && "-translate-x-0")}> */}
       <div
         className={`${
-          isOpen ? "translate-x-0" : "translate-x-[1000px]"
-        } fixed h-full w-screen bg-backgroundCol/50 backdrop-blur-sm top-0 right-0 transition-all md:hidden`}
+          isOpen ? "translate-x-0" : "translate-x-full" //slide in and out
+        } fixed h-full w-screen bg-backgroundCol/50 backdrop-blur-sm top-0 right-0 transition-all md:hidden`} //blur background
       >
         <div className="flex flex-col items-center justify-center gap-10 absolute top-0 right-0 w-1/2 h-full bg-backgroundCol md:hidden">
           {link.map((linkItem) => (
