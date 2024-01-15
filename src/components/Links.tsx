@@ -32,14 +32,14 @@ const Links = () => {
   return (
     <div>
       {/* Top menu */}
-      <div className="hidden md:flex items-center gap-5">
+      <div className="hidden items-center gap-5 md:flex">
         {link.map((link) => (
           <Link
             href={link.path}
             key={link.title}
             className={`${
               pathName === link.path
-                ? "bg-textCol text-backgroundCol rounded-full p-2" // Apply active styles
+                ? "rounded-full bg-textCol p-2 text-backgroundCol" // Apply active styles
                 : "" // Apply normal styles
             }`}
           >
@@ -49,7 +49,7 @@ const Links = () => {
       </div>
 
       <button
-        className=" md:hidden text-xl font-bold"
+        className=" text-xl font-bold md:hidden"
         onClick={() => setIsOpen(true)}
       >
         Menu
@@ -59,16 +59,16 @@ const Links = () => {
       <div
         className={`${
           isOpen ? "translate-x-0" : "translate-x-full" //slide in and out
-        } fixed h-full w-screen bg-backgroundCol/50 backdrop-blur-sm top-0 right-0 transition-all md:hidden`} //blur background
+        } bg-backgroundCol/50 fixed right-0 top-0 h-full w-screen backdrop-blur-sm transition-all md:hidden`} //blur background
       >
-        <div className="flex flex-col items-center justify-center gap-10 absolute top-0 right-0 w-1/2 h-full bg-backgroundCol md:hidden">
+        <div className="absolute right-0 top-0 flex h-full w-1/2 flex-col items-center justify-center gap-10 bg-backgroundCol md:hidden">
           {link.map((linkItem) => (
             <Link
               href={linkItem.path}
               key={linkItem.title}
               className={`${
                 pathName === linkItem.path
-                  ? "bg-textCol text-backgroundCol rounded-full p-2" // Apply active styles
+                  ? "rounded-full bg-textCol p-2 text-backgroundCol" // Apply active styles
                   : "" // Apply normal styles
               }`}
             >
@@ -78,7 +78,7 @@ const Links = () => {
         </div>
 
         <button
-          className="text-xl font-bold z-50 absolute m-8 right-5 top-5 md:hidden"
+          className="absolute right-5 top-5 z-50 m-8 text-xl font-bold md:hidden"
           onClick={() => setIsOpen(false)}
         >
           X

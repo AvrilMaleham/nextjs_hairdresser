@@ -3,11 +3,13 @@ import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <div className="h-24 flex items-center justify-between">
-        <Link href="/" className="text-3xl font-bold">Logo</Link>
-        <Links />
+    <div className="flex h-24 items-center justify-between">
+      <Link href="/" className="text-3xl font-bold">
+        Logo
+      </Link>
+      <Links />
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
