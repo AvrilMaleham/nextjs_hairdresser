@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --backgroundCol: #0d0c22;
+    --textCol: white;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-backgroundCol text-textCol;
+  }
+}
