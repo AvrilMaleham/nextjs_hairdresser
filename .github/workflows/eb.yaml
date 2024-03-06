@@ -18,8 +18,8 @@ jobs:
         with: 
           aws_access_key: "${{ secrets.AWS_ACCESS_KEY }}"
           aws_secret_key: "${{ secrets.AWS_SECRET_ACCESS_KEY }}"
-          application_name: nextjs_navbar
-          environment_name: Nextjsnavbar-env
+          application_name: navbar
+          environment_name: Navbar-env
           version_label: ${{ github.sha }}
           region: ap-southeast-1
           deployment_package: deploy.zip
